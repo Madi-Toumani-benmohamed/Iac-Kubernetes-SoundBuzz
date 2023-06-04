@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2023-06-04T20:24:25Z"
+  labels:
+    app: subsonic
+  name: subsonic
+  namespace: default
+  resourceVersion: "1728"
+  uid: ebc2737c-db2c-4bcb-9b5c-82d57af04288
+spec:
+  clusterIP: 10.99.218.142
+  clusterIPs:
+  - 10.99.218.142
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 31733
+    port: 4040
+    protocol: TCP
+    targetPort: 4040
+  selector:
+    app: subsonic
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
