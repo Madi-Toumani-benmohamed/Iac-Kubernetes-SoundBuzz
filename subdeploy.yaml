@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2023-06-04T20:22:37Z"
+  generation: 2
+  labels:
+    app: subsonic
+  name: subsonic
+  namespace: default
+  resourceVersion: "1862"
+  uid: 8529aff0-b076-4ca9-a9a0-6927dfe8249f
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 3
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: subsonic
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: subsonic
+    spec:
+      containers:
+      - image: yuminstall001/subsonic:latest
+        imagePullPolicy: Always
+        name: subsonic
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 3
+  conditions:
+  - lastTransitionTime: "2023-06-04T20:22:38Z"
+    lastUpdateTime: "2023-06-04T20:22:57Z"
+    message: ReplicaSet "subsonic-7c967d564b" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2023-06-04T20:26:27Z"
+    lastUpdateTime: "2023-06-04T20:26:27Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  observedGeneration: 2
+  readyReplicas: 3
+  replicas: 3
+  updatedReplicas: 3
