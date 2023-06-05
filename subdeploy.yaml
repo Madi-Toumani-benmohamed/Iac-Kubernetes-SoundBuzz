@@ -47,6 +47,13 @@ spec:
         resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
+        volumeMounts:
+          - mountPath: /music
+            name: monvolume
+      volumes:
+        - name: monvolume
+          persistentVolumeClaim:
+            claimName: monnfspvc
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
