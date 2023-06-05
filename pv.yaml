@@ -1,3 +1,7 @@
+#Ce manifeste YAML définit un PersistentVolume (PV) qui utilise le stockage NFS pour fournir une capacité de 1 gigaoctet. 
+#Il est accessible en lecture et écriture par plusieurs pods simultanément. 
+#Le serveur NFS est configuré avec l'adresse IP 172.31.202.174 et le chemin d'accès "/srv/nfsshare/".
+
 apiVersion: v1
 kind: PersistentVolume
 metadata:
