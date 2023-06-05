@@ -1,3 +1,7 @@
+#Ce manifeste YAML définit un PersistentVolumeClaim (PVC) qui demande un certain type de ressource de stockage persistante.
+#Dans ce cas, il demande un PVC avec une classe de stockage manuelle, autorisant plusieurs pods à lire et écrire simultanément sur le PVC. 
+#La demande de stockage est de 500 Mi
+
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
