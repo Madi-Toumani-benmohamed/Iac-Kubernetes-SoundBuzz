@@ -1,3 +1,14 @@
+# apiVersion: apps/v1: Indique la version de l'API Kubernetes utilisée pour ce manifeste. Dans ce cas, il s'agit de la version 1 de l'API apps.
+# kind: Deployment: Définit le type d'objet Kubernetes. Dans ce cas, il s'agit d'un Deployment, qui permet de gérer le déploiement et la mise à jour d'applications.
+# metadata: Contient les métadonnées de l'objet, telles que le nom, les étiquettes et l'heure de création.
+# spec: Contient les spécifications du Deployment.
+# progressDeadlineSeconds: 600: Définit la limite de temps (en secondes) pour le déploiement en cours.
+# replicas: 3: Spécifie le nombre de répliques (instances) du pod à déployer.
+# revisionHistoryLimit: 10: Définit le nombre maximal de révisions conservées pour le déploiement.
+# selector: Définit les critères de sélection des pods associés au Deployment.
+#  matchLabels: Définit les étiquettes (labels) correspondantes.
+#  strategy: Définit la stratégie de mise à jour du deploiement
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
