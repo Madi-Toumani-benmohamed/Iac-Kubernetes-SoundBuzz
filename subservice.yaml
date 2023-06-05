@@ -1,3 +1,24 @@
+#apiVersion: v1: Indique la version de l'API Kubernetes utilisée pour ce manifeste. Dans ce cas, il s'agit de la version 1 de l'API Kubernetes.
+#kind: Service: Définit le type d'objet Kubernetes. Dans ce cas, il s'agit d'un Service, qui permet d'exposer les pods d'une application et de les rendre accessibles aux autres services ou utilisateurs.
+#metadata: Contient les métadonnées de l'objet, telles que le nom, les étiquettes et l'heure de création.
+#spec: Contient les spécifications du Service.
+#clusterIP: 10.99.218.142: Spécifie l'adresse IP du Service à l'intérieur du cluster.
+#clusterIPs: Liste des adresses IP du Service à l'intérieur du cluster.
+#externalTrafficPolicy: Cluster: Spécifie la politique de trafic externe pour le Service.
+#internalTrafficPolicy: Cluster: Spécifie la politique de trafic interne pour le Service.
+#ipFamilies: Liste des familles d'adresses IP autorisées pour le Service.
+#ipFamilyPolicy: SingleStack: Spécifie la politique d'utilisation d'une seule famille d'adresses IP pour le Service.
+#ports: Spécifie les ports exposés par le Service.
+#nodePort: 31733: Spécifie le port du nœud (NodePort) sur lequel le Service sera exposé.
+#port: 4040: Spécifie le port du Service.
+#protocol: TCP: Spécifie le protocole réseau utilisé.
+#targetPort: 4040: Spécifie le port cible sur les pods du Service.
+#selector: Définit les critères de sélection des pods associés au Service
+#app: subsonic: Sélectionne les pods ayant l'étiquette (label) "app" avec la valeur "subsonic".
+#sessionAffinity: None: Spécifie la politique d'affinité de session pour le Service.
+#type: NodePort: Spécifie le type de Service. Dans ce cas, il s'agit d'un Service de type NodePort, qui expose le Service sur un port spécifique sur chaque nœud du cluster Kubernetes.
+#status: Contient des informations sur l'état actuel du Service.
+
 apiVersion: v1
 kind: Service
 metadata:
