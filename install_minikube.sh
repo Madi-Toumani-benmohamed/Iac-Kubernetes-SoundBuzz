@@ -1,12 +1,14 @@
 #!/bin/sh
 
+#change le hostname
 hostnamectl set-hostname "kubernetes"
 
-
+#ajout des dépendances
 dnf -y install libvirt qemu-kvm virt-install virt-top libguestfs-tools bridge-utils wget
 
+
 # vi /etc/libvirt/libvirtd.conf 
-# il faut décommenter les deux lignes
+# il faut décommenter les deux lignes manuellement
 # unix_sock_group = lib
 # unix_sock_rw_perms = 0770 '
 
