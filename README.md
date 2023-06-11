@@ -5,8 +5,10 @@ Les scripts d'installation installent docker ainsi que k8's pour rocky linux 8.
 # Les dossiers
 Le dossier Deploys contient les différents manifestes yaml permettant la création des déploiement ainsi que des services.
 A noter que certain déployement nécessitent la création de pv et pvc, donc il est nécessaire de déployer ceux-la en amont.
+
 Le dossier Dockerfile contient le script dockerfile utiliser pour la création du de l'image subsonic, ce même script peut-être 
 réutilisé pour des fins de mise à jour de l'image.
+
 Le dossier scripts contient les différents scripts utilisés pour le projet.
 
 # Commentaires sur les scripts
