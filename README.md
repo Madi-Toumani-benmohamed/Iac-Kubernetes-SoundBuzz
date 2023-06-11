@@ -11,3 +11,6 @@ Le script install minikube demande à décommenter manuellement deux paramètre 
 Le stockage utilisé de la solution subsonic est un serveur NFS, il faut penser à installer celui ci en exécutant le scrip nécessaire.
 
 Le subsonic.yaml n'a pas de réel utilité, il sera supprimé prochainement. Seul subdeploy et subservice sont nécessaire afin de déployer l'app.
+
+Nous avons également le fichier de configuration d'un deploy nginx, il s'agit d'un deploy basic qui n'affiche que le contenu de la page web
+par défaut de nginx.
