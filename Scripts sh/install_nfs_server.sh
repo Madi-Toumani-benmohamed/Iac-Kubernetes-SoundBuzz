@@ -7,10 +7,15 @@ export host
 
 
 sudo mkdir /var/nfs/share -p
+sudo mkdir /srv/nfs/share -p
+
+sudo chown nobody:nobody /var/nfs/share
 sudo chown nobody:nobody /var/nfs/share
 
 #ajout rule d autorisation de la rule permettant a tout les reseau de se connecter a ce dossier ci
 echo "/srv/nfs/share  *(rw,sync,no_subtree_check,no_root_squash,insecure)" >> /etc/exports
+
+echo "/var/nfs/share  *(rw,sync,no_subtree_check,no_root_squash,insecure)" >> /etc/exports
 
 #Ajout des differentes rules et auto activation du serveur au boot
 sudo firewall-cmd --add-service={nfs,nfs3,mountd,rpc-bind} --permanent
