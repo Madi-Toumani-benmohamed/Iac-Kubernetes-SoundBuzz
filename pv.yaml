@@ -16,4 +16,4 @@ spec:
     - ReadWriteMany
   nfs:
     server: 172.31.202.174
-    path: "/srv/nfsshare/"
+    path: "/var/nfs/share"
