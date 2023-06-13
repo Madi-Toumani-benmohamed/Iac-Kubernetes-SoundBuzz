@@ -33,4 +33,7 @@ RUN mv Lithopedion/ /var/music/
 # Cette instruction utilise l'outil sed pour remplacer toutes les occurrences de "root" par "subsonic" dans le fichier /etc/sysconfig/subsonic.
 RUN sed -i -e "s/root/subsonic/g" /etc/sysconfig/subsonic
 
+# Faire boot subsonic au démarrage du conteneur 
+CMD ["subsonic"]
+
 # RUN systemctl start subsonic
